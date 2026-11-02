@@ -71,7 +71,7 @@ jobs:
           name: data-splits          # brings Xtrain/Xtest/ytrain/ytest from Job 2
       - name: Start MLflow tracking server
         run: |
-          nohup mlflow ui --host 0.0.0.0 --port 5000 &   # Run MLflow UI in the background
+          nohup mlflow ui --host 0.0.0.0 --port 6000 &   # Run MLflow UI in the background
           sleep 5                                        # give the server a moment to start
       - name: Train model with MLflow tracking
         run: python week_3_practice/model_building/train.py
